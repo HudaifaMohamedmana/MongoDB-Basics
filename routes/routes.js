@@ -1,10 +1,14 @@
 const express = require("express");
-const router = express.Router();
+const db = require("../db/conn.mjs");
 
+const router = express.Router();
+console.log(db)
 // Define a route
-router.get("/", (req, res) => {
-  res.send("Hello from the route file!");
-});
+// router.get("/", async (req, res) => {
+//   let collection = await db.collection("post")
+//   let resulte = await collection.find({}).limit(50).toArray();
+//   res.send(resulte).status(200);
+// });
 
 // Export the router
 module.exports = router;
